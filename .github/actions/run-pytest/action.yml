@@ -1,0 +1,5 @@
+name: 'Run Pytest'
+description: 'Run Pytest test in the root folder'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
