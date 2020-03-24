@@ -13,4 +13,9 @@ jobs:
           name: nicolaspascual/gh-actions:${{ github.sha }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
+  test:
+    runs-on: ubuntu-18.04
+    needs: build 
+    steps:
+      - name: test
+        run: docker run --rm nicolaspascual/gh-actions:${{ github.sha }} pytest
