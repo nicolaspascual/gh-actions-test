@@ -9,5 +9,4 @@ jobs:
       - name: List Files
         uses: jcblw/bash@1.0.0
         with:
-          args:
-            - "ls -la"
+          args: ["ls -la"]
