@@ -8,5 +8,5 @@ jobs:
         uses: actions/checkout@v1
       - name: List Files
         uses: jcblw/bash@1.0.0
-        args:
-          - "ls -la"
+        with:
+          args: "ls -la"
