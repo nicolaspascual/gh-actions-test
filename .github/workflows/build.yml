@@ -3,16 +3,24 @@ on: [push, pull_request]
 jobs: 
   pre:
     runs-on: self-hosted
-    steps:
+    steps: 
+      - name: date
+        run: echo $(date)
       - name: distro
         run:  cat /etc/*-release
       - name: install
         run: echo "NOT ISOLATED" > ~/.prove
-  post-1:
+      - name: date
+        run: echo $(date)
+  postr1:
     runs-on: self-hosted
     steps:
+      - name: date
+        run: echo $(date)
       - name: test
         run: cat ~/.prove
+      - name: date
+        run: echo $(date)
   post:
     runs-on: self-hosted
     needs: pre 
