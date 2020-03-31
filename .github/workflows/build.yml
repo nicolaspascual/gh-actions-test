@@ -2,14 +2,14 @@ name: "Build"
 on: [push, pull_request]
 jobs: 
   pre:
-    runs-on: nicolas-pc
+    runs-on: self-hosted
     steps:
       - name: install
         run: apt-get install vim
       - name: Publish
         run: vim --version
   post:
-    runs-on: nicolas-pc
+    runs-on: self-hosted
     needs: pre 
     steps:
       - name: test
