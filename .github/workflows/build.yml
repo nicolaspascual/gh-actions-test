@@ -10,6 +10,8 @@ jobs:
         run:  cat /etc/*-release
       - name: install
         run: echo "NOT ISOLATED" > ~/.prove
+      - name: sleep
+        run: sleep 20s
       - name: date
         run: echo $(date)
   postr1:
@@ -17,6 +19,8 @@ jobs:
     steps:
       - name: date
         run: echo $(date)
+      - name: sleep
+        run: sleep 20s
       - name: test
         run: cat ~/.prove
       - name: date
