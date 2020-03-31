@@ -11,7 +11,7 @@ jobs:
       - name: install
         run: echo "NOT ISOLATED" > ~/.prove
       - name: sleep
-        run: sleep 20s
+        run: sleep 25s
       - name: date
         run: echo $(date)
   postr1:
@@ -20,7 +20,7 @@ jobs:
       - name: date
         run: echo $(date)
       - name: sleep
-        run: sleep 20s
+        run: sleep 25s
       - name: test
         run: cat ~/.prove
       - name: date
