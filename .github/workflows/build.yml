@@ -4,6 +4,8 @@ jobs:
   pre:
     runs-on: self-hosted
     steps:
+      - name: distro
+        run:  cat /etc/*-release
       - name: install
         run: apt-get install vim
       - name: Publish
