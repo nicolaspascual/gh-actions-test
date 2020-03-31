@@ -10,7 +10,7 @@ jobs:
         run: vim --version
   post:
     runs-on: nicolas-pc
-    needs: post 
+    needs: pre 
     steps:
       - name: test
         run: vim --version
