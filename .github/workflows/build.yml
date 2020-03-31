@@ -8,6 +8,11 @@ jobs:
         run:  cat /etc/*-release
       - name: install
         run: echo "NOT ISOLATED" > ~/.prove
+  post-1:
+    runs-on: self-hosted
+    steps:
+      - name: test
+        run: cat ~/.prove
   post:
     runs-on: self-hosted
     needs: pre 
