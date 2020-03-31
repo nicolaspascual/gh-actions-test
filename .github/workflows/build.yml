@@ -7,12 +7,10 @@ jobs:
       - name: distro
         run:  cat /etc/*-release
       - name: install
-        run: apt-get install vim
-      - name: Publish
-        run: vim --version
+        run: echo "NOT ISOLATED" > ~/.prove
   post:
     runs-on: self-hosted
     needs: pre 
     steps:
       - name: test
-        run: vim --version
+        run: cat ~/.prove
